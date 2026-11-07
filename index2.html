@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <script src="index.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Todo List</h1>
+
+<input
+        type="text"
+        id="taskInput"
+        placeholder="Enter a new task"
+/>
+
+<button onclick="addTask()">Add</button>
+
+<h3>Tasks: <span id="taskCount">0</span></h3>
+
+<button onclick="filterTasks('all')">All</button>
+<button onclick="filterTasks('completed')">Completed</button>
+<button onclick="filterTasks('pending')">Pending</button>
+
+<ul id="taskList"></ul>
+
+</body>
+</html>
